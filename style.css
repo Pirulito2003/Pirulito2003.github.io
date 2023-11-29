@@ -1,0 +1,224 @@
+body{
+    margin: 0px;
+    background: #FF00FF;
+    background-image: url("/coração.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    display: grid;
+    place-items: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h1{
+    color: #fff;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.p{  
+    margin: 0px;
+    font-size:20px ;
+    padding: 20px;
+    color: #ffffff;
+    background: linear-gradient(to top ,#0000008b, #3001288d, #01066ba7);
+    backdrop-filter: saturate(10%);
+    border-radius: 15px;
+    /* border: 1px solid #fff */
+    
+}
+.espaco{
+    display: block;
+}
+.pedido{
+    border-radius: 10px;
+    padding: 10px;
+    margin: 30px;
+    font-size: 30px;
+    background: linear-gradient(to top ,#ff01d08b, #49eaff8d, #e30af2a7);
+    font-weight: bolder;
+    text-transform: uppercase;
+    color:#370152;
+    animation: go-back 1s infinite alternate; /*ADICIONANDO KEYFRAMES E DIZENDO QUE SERÁ INFINITA(NÃO IRA ENCERRAR A ANIMAÇÃO)*/
+}
+
+@keyframes go-back { /*DECRETANDO COMO A ANIMAÇÃO VAI SE COMPORTAR EM LINHA OU COLUNA( SE MOVER PRA CIMA OU BAIXO(Y) OU ESQUEDA E DIREITA(X) )*/ 
+  from { 
+    transform: translateX(20px); /*ANIMAÇÃO VAI SE MOVER 20PX PARA A DIREITA*/
+  }
+  to {
+    transform: translateX(-20px); /*ANIMAÇÃO VAI SE MOVER 20PX PARA A ESQUERDA*/
+  }
+}
+/*OCULTANDO UMA DIV E PONDO SOMENTE A ATIVA PARA APARECER*/
+.conteudo{
+  display: none;
+}
+
+.ativa{
+  /* display: block; */
+  display: grid;
+  place-items: center;
+}
+/* ESTILOS DO BOTÃO QUE ESTIVER SELECIONADO */
+.selecionado{
+  transform: scale(1.1);
+  box-shadow:
+   2px -1px 5px 2px #fff,
+   7px 7px 20px 0px #8131dc,
+   4px 4px 5px 0px #f9fd07;
+  transition:400ms ease all;
+  font-size: 15px;
+  font-weight: bolder;
+  color: #ffffff;
+
+}
+
+/* BOTOES SIM E NÃO */
+
+.btn {
+    margin:40px;
+    width: 140px;
+    height: 50px;
+    background: linear-gradient(to top, #fd052e53, #fd052e75, #fd052f);
+    color: var(--text-primary-color);
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+  }
+  .btn span {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: top 0.5s;
+  }
+  .btn-text-one {
+    /* position: absolute; */
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+  .btn-text-two {
+    position: absolute;
+    width: 100%;
+    top: 150%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+  .btn:hover {
+    background: #ff00dd;
+    color: var(--main-color);
+  }
+  .btn:hover .btn-text-one {
+    position: absolute;
+    top: -100%;
+  }
+  .btn:hover .btn-text-two {
+    top: 50%;
+  }
+
+.ajustebt{
+    grid-template-columns: 1fr 1fr ;
+    gap: 30px;
+
+}
+  /* ESTILIZAÇÃO BOTÃO INICIO (UNICO QUE FICA NO TOPO SEMPRE) */
+  .inicio{
+    padding: 10px 100px;
+    background: linear-gradient(to top, #9605fd53, #fd05ae75, #ff49e1);
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #fff;
+    border-bottom: #fff 1px solid;
+    box-shadow:
+    2px -1px 5px 2px #fff,
+    7px 7px 20px 0px #8131dc,
+    4px 4px 5px 0px #f9fd07;
+    margin-bottom: 10px;
+  }
+
+  /* ESTILIZAÇÃO DOS OUTROS BOTÕES */
+  .botao{
+    padding: 20px ;
+    background: linear-gradient(#05fdf1be, #fd05ae75, #ff49e1);
+    font-weight: bolder;
+    color: #fff;
+    border-radius: 15px;
+    box-shadow:
+    2px -1px 5px 2px #fff,
+    5px 5px 10px 0px #8131dc,
+    4px 4px 2px 0px #fd0745;
+  }
+
+  /* ESTILIZAÇÃO DO MODAL */
+  dialog{
+    padding: 20px;
+    background: linear-gradient(to top, #fd052f, #8131dc );
+    border-radius: 15px;
+    border: 1px solid;
+  }
+  .modal {
+    display: grid;
+    place-items: center;
+    background:none;
+  }
+  #fecharModal{
+    margin-top: 20px;
+    padding: 5px 20px;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    box-shadow:
+    1px 1px 5px 2px #000;
+    cursor:pointer ;
+  }
+  a{
+    color: #000;
+    text-decoration: none;
+  }
+
+  #fecharModal:hover{
+    box-shadow:
+    1px 1px 5px 2px #ffffff;
+  }
+  #fecharM{
+    margin-top: 20px;
+    padding: 5px 20px;    
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    box-shadow:
+    1px 1px 5px 2px #000;
+    cursor:pointer ;
+    }
+  #fecharM:hover{
+    box-shadow:
+    1px 1px 5px 2px #ffffff;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width:450px) {
+    .ajustebt{
+        grid-template-columns: 1fr;
+        gap: 0px;
+        place-items: center;
+    }
+    .pedido{
+        font-size: 25px;
+    }
+    .btn{
+        margin: 10px;
+    }
+    
+}
+@media (max-width:350px) {
+    .btn{
+        margin: 5px;
+        width: 100px;
+    }
+}
